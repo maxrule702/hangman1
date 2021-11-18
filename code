@@ -1,10 +1,12 @@
 package com.company;
-
+import java.lang.*;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        Character letter;
+        boolean res;
         Scanner input = new Scanner(System.in);
         List myChars = new ArrayList();
         int RandomPostion = 0;
@@ -22,10 +24,11 @@ public class Main {
         int postion = 0;
         int size = myChars.size();
         for (int i = 0; i <= size; i++) {
-            char letter = (char) myChars.get(postion);
+            letter = (char) myChars.get(postion);
             System.out.println("please enter your guess");
-            String userInput = input.nextLine();
-            if (userInput.equals(letter)) {
+            System.out.println(letter);
+            Character userInput = input.next().charAt(0);
+            if (res = userInput.equals(letter)) {
                 System.out.println("test");
             postion++;}
             else{
@@ -37,5 +40,5 @@ public class Main {
             }
         }
 
-
+ 
 
