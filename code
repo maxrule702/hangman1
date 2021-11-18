@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Character letter;
+        int placeholder = 0;
         int life = 0;
         int count = 0;
         boolean res;
@@ -42,9 +43,11 @@ public class Main {
                 }
             } else {
                 System.out.println("incorrect letter");
-                while (life != 9) {
+
+                for (int i = 0; i <= 0; i++) {
                     System.out.println(myHangman[life]);
-                    life++;}
+                    life++;
+                   }
 
                     if (life == 9){
                         System.out.print("you ve run out of lifes");
@@ -55,6 +58,7 @@ public class Main {
             }
         }
     }
+
 
 
 
