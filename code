@@ -6,25 +6,28 @@ public class Main {
 
     public static void main(String[] args) {
         Character letter;
+        int life = 0;
         int count = 0;
         boolean res;
         Scanner input = new Scanner(System.in);
         List myChars = new ArrayList();
         int RandomPostion = 0;
-	String [] myWords = {"hello","my","name","is","slim","shady"};
-     for (int i = 0; i <= 0; i++) {
+        String[] myWords = {"hello", "my", "name", "is", "slim", "shady"};
+        String[] myHangman = {"_", "_", "_", "|", "|", "|","_", "_", "_"};
+        for (int i = 0; i <= 0; i++) {
             int x = 1 + (int) (Math.random() * 5);
             RandomPostion = x;
         }
-    String randomWord = myWords[RandomPostion];
+        String randomWord = myWords[RandomPostion];
         System.out.println(randomWord);
 
-        for(char wordSplit : randomWord.toCharArray()) {
+        for (char wordSplit : randomWord.toCharArray()) {
             myChars.add(wordSplit);
         }
         int postion = 0;
         int size = myChars.size();
-        for (int i = 0; i <= size; i++) {
+        //for (int i = 0; i <= size; i++) {
+        while (true) {
             letter = (char) myChars.get(postion);
             System.out.println("please enter your letter guess in order if the word");
             System.out.println(letter);
@@ -33,16 +36,25 @@ public class Main {
                 System.out.println("correct letter");
                 count++;
                 postion++;
-                if (size == count){
+                if (size == count) {
                     System.out.println("you win");
                     break;
                 }
-           }
-            else{
+            } else {
                 System.out.println("incorrect letter");
-            }
-        }
+                while (life != 9) {
+                    System.out.println(myHangman[life]);
+                    life++;}
+
+                    if (life == 9){
+                        System.out.print("you ve run out of lifes");
+                        break;
+                    }
+                }
 
             }
         }
+    }
+
+
 
