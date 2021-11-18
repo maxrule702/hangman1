@@ -45,8 +45,10 @@ public class Main {
                 System.out.println("incorrect letter");
 
                 for (int i = 0; i <= 0; i++) {
-                    System.out.println(myHangman[life]);
-                    life++;
+                    
+                        System.out.println(myHangman[life]);
+                        life++;
+                    }
                    }
 
                     if (life == 9){
@@ -57,8 +59,4 @@ public class Main {
 
             }
         }
-    }
-
-
-
-
+    
